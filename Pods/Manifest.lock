@@ -1,0 +1,30 @@
+PODS:
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
+  - KYDrawerController (2.1.0)
+  - Realm (3.17.1):
+    - Realm/Headers (= 3.17.1)
+  - Realm/Headers (3.17.1)
+  - RealmSwift (3.17.1):
+    - Realm (= 3.17.1)
+  - SnapKit (4.0.1)
+
+DEPENDENCIES:
+  - IGListKit (~> 3.0)
+  - KYDrawerController
+  - RealmSwift
+  - SnapKit (~> 4.0.0)
+
+SPEC CHECKSUMS:
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+  KYDrawerController: baad0e63b09c0cb564bd48f0f7f70f45d9176ebc
+  Realm: c204f1a890f07dea43b14132a6aad118c054b8f2
+  RealmSwift: 4d3c9233544b9cd08a8913e0872b9038eb99b054
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+
+PODFILE CHECKSUM: ab69f082456cf738fb7733f81c28c768f122197a
+
+COCOAPODS: 1.4.0
