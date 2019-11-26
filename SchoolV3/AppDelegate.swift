@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import KYDrawerController
+import Firebase
 
 let log = myLog()
 
@@ -24,23 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         MainCoordinator().start(window: window)
         window?.makeKeyAndVisible()
-//        let mainViewController   = CustomTabBarController()
-//        let drawerViewController = MenuController()
-//        let drawerController     =  KYDrawerController(drawerDirection: KYDrawerController.DrawerDirection.left, drawerWidth: 200)
-//        let navigationController = UINavigationController(
-//            rootViewController: mainViewController
-//        )
-//        navigationController.navigationBar.barTintColor = Config().colors.grayBackground
-//        navigationController.navigationBar.tintColor  = Config().colors.orangeBackground
-//        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : Config().colors.orangeBackground]
-//
-//        drawerController.mainViewController = navigationController
-//        drawerController.drawerViewController = drawerViewController
-//
-//        window = UIWindow()
-//        window?.rootViewController = drawerController
-//        window?.makeKeyAndVisible()
-//
+        FirebaseApp.configure()
+        application.registerForRemoteNotifications()
         
         return true
     }
@@ -70,3 +56,64 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        completionHandler()
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
+        
+    }
+    
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        
+    }
+    
+    /// Register for push notifications
+    func registerForPushNotification(){
+        
+        if #available(iOS 10.0, *) {
+            let center  = UNUserNotificationCenter.current()
+            center.delegate = self
+            center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+                if error == nil{
+                    DispatchQueue.main.async {
+                        UIApplication.shared.registerForRemoteNotifications()
+                    }
+                }
+            }
+        } else {
+            
+            let settings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+            UIApplication.shared.registerForRemoteNotifications()
+        }
+    }
+}
+
+
+extension AppDelegate: MessagingDelegate {
+    
+    func application(received remoteMessage: MessagingRemoteMessage) {
+        
+        
+    }
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        
+        print(fcmToken)
+        
+    }
+}

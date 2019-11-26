@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,10 +23,12 @@
 		3A02107B230A6B76008482CE /* FeddFileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02107A230A6B76008482CE /* FeddFileCell.swift */; };
 		3A02107D230A6B9F008482CE /* FeedVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02107C230A6B9F008482CE /* FeedVideoCell.swift */; };
 		3A03E2F92306A716001ACB54 /* FeedImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A03E2F82306A716001ACB54 /* FeedImagesCell.swift */; };
+		3A23ED71238D243100EC096B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A23ED70238D243100EC096B /* Network.swift */; };
 		3A8725312303052A0096D8D2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8725302303052A0096D8D2 /* MainViewController.swift */; };
 		3ABADE262303FF130091EF15 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABADE252303FF130091EF15 /* MenuController.swift */; };
 		3ABADE282303FF3F0091EF15 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABADE272303FF3F0091EF15 /* MenuCell.swift */; };
 		3ABADE2E2303FFC70091EF15 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABADE2D2303FFC70091EF15 /* MenuData.swift */; };
+		3ACC90D2235598B9004FEAD3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ACC90D1235598B9004FEAD3 /* GoogleService-Info.plist */; };
 		3ACF018522E841E200EE0629 /* Class Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF018422E841E200EE0629 /* Class Data.swift */; };
 		3ACF018822E84FDF00EE0629 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF018722E84FDF00EE0629 /* BaseCell.swift */; };
 		3ACF018D22E8596200EE0629 /* ClassFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACF018C22E8596200EE0629 /* ClassFeedViewCell.swift */; };
@@ -80,10 +82,13 @@
 		3A02107A230A6B76008482CE /* FeddFileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeddFileCell.swift; sourceTree = "<group>"; };
 		3A02107C230A6B9F008482CE /* FeedVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVideoCell.swift; sourceTree = "<group>"; };
 		3A03E2F82306A716001ACB54 /* FeedImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagesCell.swift; sourceTree = "<group>"; };
+		3A23ED70238D243100EC096B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		3A66E852234F742800F41744 /* SchoolV3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SchoolV3.entitlements; sourceTree = "<group>"; };
 		3A8725302303052A0096D8D2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3ABADE252303FF130091EF15 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		3ABADE272303FF3F0091EF15 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		3ABADE2D2303FFC70091EF15 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
+		3ACC90D1235598B9004FEAD3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3ACF018422E841E200EE0629 /* Class Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Class Data.swift"; sourceTree = "<group>"; };
 		3ACF018722E84FDF00EE0629 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		3ACF018C22E8596200EE0629 /* ClassFeedViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassFeedViewCell.swift; sourceTree = "<group>"; };
@@ -280,6 +285,14 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
+		3A23ED6F238D241E00EC096B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3A23ED70238D243100EC096B /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		3A8725292302EFBF0096D8D2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,9 +472,12 @@
 		3AD1744A22E6FB9500180763 /* SchoolV3 */ = {
 			isa = PBXGroup;
 			children = (
+				3A23ED6F238D241E00EC096B /* Network */,
+				3A66E852234F742800F41744 /* SchoolV3.entitlements */,
 				3A002DDD22E7034C0025D5AE /* Extra */,
 				3AD1747A22E6FC0500180763 /* Routes */,
 				3AD1747922E6FBF300180763 /* Views */,
+				3ACC90D1235598B9004FEAD3 /* GoogleService-Info.plist */,
 				3A8725302303052A0096D8D2 /* MainViewController.swift */,
 				3AD1744B22E6FB9500180763 /* AppDelegate.swift */,
 				3AD1744D22E6FB9500180763 /* ViewController.swift */,
@@ -541,7 +557,6 @@
 				3AD1744522E6FB9500180763 /* Frameworks */,
 				3AD1744622E6FB9500180763 /* Resources */,
 				4E31CB51100C2E1845786D8D /* [CP] Embed Pods Frameworks */,
-				9F6C10238D9E7D0B75EC02BF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -600,6 +615,11 @@
 				TargetAttributes = {
 					3AD1744722E6FB9500180763 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					3AD1745B22E6FB9700180763 = {
 						CreatedOnToolsVersion = 10.1;
@@ -637,6 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AD1745622E6FB9700180763 /* LaunchScreen.storyboard in Resources */,
+				3ACC90D2235598B9004FEAD3 /* GoogleService-Info.plist in Resources */,
 				3AD1745322E6FB9700180763 /* Assets.xcassets in Resources */,
 				3AD1745122E6FB9500180763 /* Main.storyboard in Resources */,
 			);
@@ -664,40 +685,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SchoolV3/Pods-SchoolV3-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
-				"${BUILT_PRODUCTS_DIR}/KYDrawerController/KYDrawerController.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SchoolV3/Pods-SchoolV3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KYDrawerController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SchoolV3/Pods-SchoolV3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SchoolV3/Pods-SchoolV3-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F6C10238D9E7D0B75EC02BF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SchoolV3/Pods-SchoolV3-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SchoolV3/Pods-SchoolV3-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C6948254CF9ED7560D3AC05A /* [CP] Check Pods Manifest.lock */ = {
@@ -733,6 +730,7 @@
 				3A021079230A6A89008482CE /* FeedPollCell.swift in Sources */,
 				3A02107B230A6B76008482CE /* FeddFileCell.swift in Sources */,
 				3A002DF522E71B450025D5AE /* ClassFeedViewController.swift in Sources */,
+				3A23ED71238D243100EC096B /* Network.swift in Sources */,
 				3A002DEF22E715710025D5AE /* ClassViewController.swift in Sources */,
 				3AD1744E22E6FB9500180763 /* ViewController.swift in Sources */,
 				3ACF019A22E89DA800EE0629 /* Class Header View.swift in Sources */,
@@ -930,14 +928,15 @@
 			baseConfigurationReference = 544773FF631409084C15B3A3 /* Pods-SchoolV3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SchoolV3/SchoolV3.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8KG8GNK636;
+				DEVELOPMENT_TEAM = 9X2593SH8B;
 				INFOPLIST_FILE = SchoolV3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.oa.SchoolV3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oa.lms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -949,14 +948,15 @@
 			baseConfigurationReference = 1FCEF5E98106575A7B87F4C8 /* Pods-SchoolV3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SchoolV3/SchoolV3.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8KG8GNK636;
+				DEVELOPMENT_TEAM = 9X2593SH8B;
 				INFOPLIST_FILE = SchoolV3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.oa.SchoolV3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oa.lms;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

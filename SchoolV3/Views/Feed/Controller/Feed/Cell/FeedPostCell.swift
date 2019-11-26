@@ -49,7 +49,6 @@ class FeedPostCell: BaseCell<FeedData> ,UICollectionViewDelegateFlowLayout,UICol
                     self.fileView.fileName.text = data.file?[0].fileName
 //                    self.pager.numberOfPages = 0
                 
-                
             default:
                 // hide image / file view
                 self.fileCollectionView.delegate = nil
@@ -212,6 +211,9 @@ class FeedPostCell: BaseCell<FeedData> ,UICollectionViewDelegateFlowLayout,UICol
                     make.trailing.equalTo(mainView)//.offset(-20)
                     make.height.equalTo(40)
                 }
+                fileCollectionView.isHidden = false
+                pager.isHidden = false
+                fileView.isHidden = true
             case .file?:
                 mainView.addSubview(fileView)
                 fileView.backgroundColor = .cyan
@@ -221,6 +223,9 @@ class FeedPostCell: BaseCell<FeedData> ,UICollectionViewDelegateFlowLayout,UICol
                     make.trailing.equalTo(mainView).offset(-10)//.offset(-20)
                     make.height.equalTo(100) // plus 5 for space on bottom
                 }
+                fileCollectionView.isHidden = true
+                pager.isHidden = true
+                fileView.isHidden = false
             default:
                 fileView.removeFromSuperview()
                 pager.removeFromSuperview()
@@ -341,9 +346,9 @@ class FeedFileView : UIView  {
         addSubview(fileImg)
         fileImg.backgroundColor = .green
         fileImg.snp.makeConstraints { (make) in
-            make.leading.equalTo(self).offset(10)
+            make.leading.equalTo(self)//.offset(10)
             make.top.equalTo(self)
-            make.width.equalTo(self.frame.height - 40)
+            make.width.equalTo(40)
             make.bottom.equalTo(self)
         }
         
@@ -352,7 +357,7 @@ class FeedFileView : UIView  {
         snp.makeConstraints { (make) in
             make.top.equalTo(self)
             make.bottom.equalTo(self)
-            make.leading.equalTo(fileImg.snp.trailing).offset(10)
+            make.leading.equalTo(fileImg.snp.trailing)//.offset(10)
             make.trailing.equalTo(self)
         }
         
